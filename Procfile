@@ -1,2 +1,3 @@
-﻿web: python posting_service.py
-worker: python scheduler.py
+﻿web: python app.py
+worker: python posting_service.py
+clock: python scheduler.py
