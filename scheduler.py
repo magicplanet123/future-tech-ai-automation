@@ -22,12 +22,12 @@ def post_content():
     except Exception as e:
         print(f"❌ Error during posting: {e}")
 
-# 18:00 UTC = 2 PM US Eastern (EDT, UTC-4)
-schedule.every().day.at("18:00").do(generate_content)
+# 19:00 UTC = 11 PM Dubai (UTC+4)
+schedule.every().day.at("19:00").do(generate_content)
 schedule.every(2).hours.do(post_content)
 
-print("🚀 AUTONOMOUS SCHEDULER STARTED")
-print("Content generation: Daily at 18:00 UTC (2 PM US Eastern)")
+print("🚀 AUTONOMOUS SCHEDULER STARTED - TEST MODE")
+print("Content generation: 19:00 UTC (11 PM Dubai)")
 print("Posting cycle: Every 2 hours")
 
 while True:
